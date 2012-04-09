@@ -12,4 +12,7 @@ MySQLDatabase::set_connection_charset('utf8');
 
 Director::addRules(50, array(
 	"" => "->admin/contact",
+	'company/$ID' => "CompanyContactList",
 ));
+
+Object::add_extension('Member', 'MemberExtension');
